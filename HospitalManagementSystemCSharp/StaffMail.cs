@@ -31,11 +31,11 @@ namespace HospitalManagementSystemCSharp
                 smtp.Timeout = 10000;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("adityarulesforever13@gmail.com".Trim(), "Rulesforever$123".Trim());
+                smtp.Credentials = new NetworkCredential("/* Genuine Mail ID */".Trim(), "/* Password of the Mail ID */".Trim());
                 MailMessage msg = new MailMessage();
                 msg.IsBodyHtml = true;
                 msg.To.Add(textBox1.Text);
-                msg.From = new MailAddress("adityarulesforever13@gmail.com");
+                msg.From = new MailAddress("/*Sender Mail ID */");
                 msg.Subject = textBox2.Text;
                 msg.Body = textBox3.Text;
                 if (textBox4.Text != "")
