@@ -41,13 +41,13 @@ namespace HospitalManagementSystemCSharp
             try
             {
                 SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
+                smtp.Host = "smtp.gmail.com"; //Format only for Gmail mail addresses
                 smtp.Port = 587;
                 smtp.EnableSsl = true;
                 smtp.Timeout = 10000;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("adityarulesforever13@gmail.com".Trim(), "Rulesforever$123".Trim());
+                smtp.Credentials = new NetworkCredential("//Genuine Mail ID".Trim(), "//Mail ID for the password".Trim());
                 MailMessage msg = new MailMessage();
                 msg.IsBodyHtml = true;
                 msg.To.Add(textBox1.Text);
@@ -55,7 +55,7 @@ namespace HospitalManagementSystemCSharp
                 {
                     msg.CC.Add(textBox5.Text);
                 }
-                msg.From = new MailAddress("adityarulesforever13@gmail.com");
+                msg.From = new MailAddress("/*Sender's Mail ID*/");
                 msg.Subject = textBox2.Text;
                 msg.Body = textBox3.Text;
                 if (textBox4.Text != "")
